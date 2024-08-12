@@ -1,0 +1,75 @@
+:root {
+    --blue: rgb(0, 162, 255);
+    --blue2: rgb(0, 135, 213);
+    --lightgrey: rgb(245, 245, 245);
+    --lightgrey2: rgb(240, 240, 240);
+}
+
+@media (max-width: 620px) {
+    .info-background {
+        display: none;
+    }
+
+    .info {
+        grid-template-columns: 80%;
+        grid-template-rows: 0fr 1fr 1fr 0fr;
+        margin-top: 0px;
+        justify-content: center;
+
+        .job-aim {
+            background-color: var(--lightgrey);
+            padding: 20px;
+        }
+        .personal-info {
+            background-color: var(--lightgrey2);
+            padding: 20px;
+        }
+    }
+
+    .job-info {
+        grid-template-columns: 450px;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .awards {
+        .award {
+            width: 500px;
+
+            img {
+                height: 75px;
+            }
+
+            div.info {
+                margin-left: 15px;
+                font-size: small;
+            }
+        }
+    }
+
+    .projects {
+        grid-template-columns: 450px;
+        grid-template-rows: auto auto auto auto;
+        justify-content: center;
+        margin-left: 100px;
+
+        .card {
+            width: 80%;
+
+            div.project-info {
+                font-size: small;
+            }
+        }
+    }
+
+    .contacts {
+        .site {
+            width: 100px;
+    
+            a:link, a:visited, a:active {
+                i {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
