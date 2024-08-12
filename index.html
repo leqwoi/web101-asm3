@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/laptop.css" />
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/font.css" />
+    <title>Assignment02</title>
+  </head>
+  <body>
+    <div class="cv">
+      <div class="banner" id="home">
+        <img src="images/banner.jpg" alt="Banner">
+        <div class="text">
+          <span class="name">Lê Minh Khôi</span><br>
+          Full Stack Developer
+        </div>
+      </div>
+      <!-- Navbar -->
+      <div class="container-fluid" id="navbar">
+        <div class="navbar navbar-expand bg-light navbar-light">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Collapse navigation bar -->
+          <div class="collapse navbar-collapse justify-content-center" id="navmenu">
+            <!-- Collapse menu -->
+            <ul class="navbar-nav align-items-center flex-md-row flex-column">
+              <li class="nav-item">
+                <a href="#info" class="nav-link">
+                  <i class="icon-user"></i>Thông tin
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#job-info" class="nav-link">
+                  <i class="icon-doc-text-inv"></i>Lý lịch
+                </a>
+              </li>
+              <li class="nav-item" id="name">
+                <a href="#home" class="nav-link">
+                  <span class="name">Lê Minh Khôi</span><br>
+                  <span class="job">Full Stack Developer</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#awards" class="nav-link">
+                  <i class="icon-mail-alt"></i>Chứng chỉ
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#projects" class="nav-link">
+                  <i class="icon-star-1"></i>Dự án
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Job info -->
+      <div class="info-background">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="info" id="info">
+        <div id="spacer"></div>
+        <div class="job-aim">
+          <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
+          <p class="section-content">
+            Em là học sinh đang theo học cấp 3 tại trường THPT Vinschool Ocean Park, và em đang mong muốn tìm kiếm định hướng ngành nghề trong bộ môn công nghệ thông tin.
+          </p>
+        </div>
+        <div class="personal-info">
+          <h2 class="section-title">Thông tin cá nhân</h2>
+          <!-- Personal info (default hidden) -->
+          <div class="container" id="info-full-ctn" style="display: none;">
+            <p class="section-content">
+              <span class="item">Giới tính:</span> Nam<br>
+              <span class="item">Ngày sinh:</span> 23/04/2007<br>
+              <span class="item">Điện thoại:</span> (+84) 904339600<br>
+              <span class="item">Email:</span> khoilmfx28754@funix.edu.vn<br>
+              <span class="item">Địa chỉ:</span> Hà Nội<br>
+              <span class="item">Website:</span> N/A <br><br>
+              <i class="icon-twitter"></i><i class="icon-facebook"></i><i class="icon-gplus"></i><i class="icon-linkedin"></i>
+            </p>
+          </div>
+          <!-- Email input -->
+          <div class="container" id="email-input-ctn">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Email" id="email-input">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="verifyEmail()">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div id="spacer"></div>
+      </div>
+      <!-- Job info -->
+      <div class="job-info" id="job-info">
+        <div class="card" id="experience">
+          <div class="title">
+            <span class="title">Kinh nghiệm</span>
+            <i class="ic-toolbox"></i>
+          </div>
+          <div class="container" id="card-experience" style="display: none;">
+            <span class="subtitle">Tự học code</span>
+            <p class="content">
+              <span class="date">08-2023 - </span><span class="badge">Hiện tại</span>
+              <ul>
+                <li>Học sinh THPT</li>
+                <li>Học tập và tham gia các hoạt động tại trường</li>
+                <li>Tự học coding các ngôn ngữ</li>
+                <li>Làm các dự án cá nhân</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col text-center">
+            <button 
+              type="button" 
+              class="btn btn-sm btn-outline-warning w-50 mt-3 rounded-pill" 
+              onclick="toggleCardVisibility('card-experience')"
+              id="btn-card-experience"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+        <div class="card" id="education">
+          <div class="title">
+            <span class="title">Học vấn</span>
+            <i class="ic-pencil"></i>
+          </div>
+          <div class="container" id="card-education" style="display: none;">
+            <span class="subtitle">THPT Vinschool Ocean Park</span>
+            <p class="content">
+              <span class="date">08/2023 - </span><span class="badge">Hiện tại</span>
+              <ul>
+                <li>Học sinh THPT Vinschool Ocean Park</li>
+                <li>Học tập và tham gia các hoạt động tại trường</li>
+                <li>GPA: 9.2 / 10</li>
+              </ul>
+            </p>
+            <span class="subtitle">THCS Vinschool Imperia</span>
+            <p class="content">
+              <span class="date">08/2018 - 08/2022</span>
+              <ul>
+                <li>Học sinh THPT Vinschool Imperia</li>
+                <li>Học tập và tham gia các hoạt động tại trường</li>
+                <li>GPA: 9 / 10</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col text-center">
+            <button 
+              type="button" 
+              class="btn btn-sm btn-outline-warning w-50 mt-3 rounded-pill" 
+              onclick="toggleCardVisibility('card-education')"
+              id="btn-card-education"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+        <div class="card" id="activity">
+          <div class="title">
+            <span class="title">Hoạt động</span>
+            <i class="ic-toolbox"></i>
+          </div>
+          <div class="container" id="card-activity" style="display: none;">
+            <span class="subtitle">CLB tại trường</span>
+            <p class="content">
+              <span class="date">08/2018 - 08/2023</span>
+              <ul>
+                <li>Tham gia các hoạt động CLB & ngoại khóa tại trường</li>
+                <li>Vị trí: thành viên / ban nhân sự, thiết kế</li>
+              </ul>
+            </p>
+            <span class="subtitle">Giải thưởng toán/tiếng anh/tin học</span>
+            <p class="content">
+              <span class="date">2017 - </span><span class="badge">Hiện tại</span>
+              <ul>
+                <li>Giải distinction toán IKMC 2018, 2019, 2020, 2021, 2022.</li>
+                <li>Giải nhì, ba TOEFL Junior/IBT cấp thành phố, quốc gia</li>
+                <li>8 HCV, HCB World Scholar's Cup</li>
+                <li>Giải ba HSG tin học thành phố Hà Nội</li>
+                <li>Các giải khác..</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col text-center">
+            <button 
+              type="button" 
+              class="btn btn-sm btn-outline-warning w-50 mt-3 rounded-pill" 
+              onclick="toggleCardVisibility('card-activity')"
+              id="btn-card-activity"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+        <div class="card" id="hobby">
+          <div class="title">
+            <span class="title">Sở thích</span>
+            <i class="ic-telescope"></i>
+          </div>
+          <div class="container" id="card-hobby" style="display: none;">
+            <div class="hobbies">
+              <div class="hobby-entry">
+                <i class="ic-megaphone"></i>
+                <p>Âm nhạc</p>
+              </div>
+              <div class="hobby-entry">
+                <i class="ic-strategy"></i>
+                <p>Chơi game</p>
+              </div>
+              <div class="hobby-entry">
+                <i class="	ic-hotairballoon"></i>
+                <p>Du lịch</p>
+              </div>
+              <div class="hobby-entry">
+                <i class="ic-basket"></i>
+                <p>Nấu ăn</p>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center">
+            <button 
+              type="button" 
+              class="btn btn-sm btn-outline-warning w-50 mt-3 rounded-pill" 
+              onclick="toggleCardVisibility('card-hobby')"
+              id="btn-card-hobby"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+        <div class="card" id="language">
+          <div class="title">
+            <span class="title">Languages</span>
+            <i class="ic-mic"></i>
+          </div>
+          <div class="container" id="card-language" style="display: none;">
+            <div class="bars">
+              <span class="subtitle-2">HTML/CSS: Fundamental</span>
+              <span class="bar" id="blue"></span><span class="bar" id="grey"></span><span class="bar" id="grey"></span>
+              <span class="subtitle-2">NodeJS: Intermediate</span>
+              <span class="bar" id="blue"></span><span class="bar" id="blue"></span><span class="bar" id="grey"></span>
+              <span class="subtitle-2">Python: Advanced</span>
+              <span class="bar" id="blue"></span><span class="bar" id="blue"></span><span class="bar" id="blue"></span>
+              <span class="subtitle-2">Java: Fundamental</span>
+              <span class="bar" id="blue"></span><span class="bar" id="grey"></span><span class="bar" id="grey"></span>
+              <span class="subtitle-2">C/C++: Fundamental</span>
+              <span class="bar" id="blue"></span><span class="bar" id="grey"></span><span class="bar" id="grey"></span>
+            </div>
+          </div>
+          <div class="col text-center">
+            <button 
+              type="button" 
+              class="btn btn-sm btn-outline-warning w-50 mt-3 rounded-pill" 
+              onclick="toggleCardVisibility('card-language')"
+              id="btn-card-language"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+        <div class="card" id="skill">
+          <div class="title">
+            <span class="title">Skills</span>
+            <i class="ic-tools-2"></i>
+          </div>
+          <div class="container" id="card-skill" style="display: none;">
+            <div class="bars">
+              <span class="subtitle-2">Tiếng Anh - IELTS 8.0</span>
+              <span class="bar" id="blue"></span><span class="bar" id="blue"></span><span class="bar" id="blue"></span>
+              <span class="subtitle-2">Tiếng Nhật - JLPT N5</span>
+              <span class="bar" id="blue"></span><span class="bar" id="grey"></span><span class="bar" id="grey"></span>
+            </div>
+          </div>
+          <div class="col text-center">
+            <button 
+              type="button" 
+              class="btn btn-sm btn-outline-warning w-50 mt-3 rounded-pill" 
+              onclick="toggleCardVisibility('card-skill')"
+              id="btn-card-skill"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Awards -->
+      <div class="awards" id="awards">
+        <div class="award">
+          <img src="images/Cert_DBI.png" alt="DBI Certificate">
+          <div class="info">
+            <p>
+              <span class="title">Chứng chỉ lập trình DBI - Funix</span><br>
+              <ul>
+                <li>Chứng chỉ thuộc chương trình CCDN</li>
+                <li>GPA: ? / 10</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="award">
+          <img src="images/Cert_PRF.png" alt="PRF Certificate">
+          <div class="info">
+            <p>
+              <span class="title">Chứng chỉ lập trình PRF - Funix</span><br>
+              <ul>
+                <li>Chứng chỉ thuộc chương trình CCDN</li>
+                <li>GPA: ? / 10</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="award">
+          <img src="images/Cert_WEB.png" alt="WEB Certificate">
+          <div class="info">
+            <p>
+              <span class="title">Chứng chỉ lập trình WEB - Funix</span><br>
+              <ul>
+                <li>Chứng chỉ thuộc chương trình CCDN</li>
+                <li>GPA: ? / 10</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Projects -->
+      <div class="projects" id="projects">
+        <div class="card" id="experience">
+          <img src="images/project_1.png" alt="Project 1" class="img-fluid w-100 d-none d-sm-block">
+          <div class="project-info">
+            <div class="title"><span class="title">CV cá nhân</span></div>
+            <div class="subtitle">
+              <span class="year">2024</span>
+              <span class="company"><i class="icon-user-1"></i>Funix</span>
+              <span class="position"><i class="icon-lamp"></i>Developer</span>
+            </div>
+            <div class="description">
+              <div class="category">Mô tả</div>
+              <div class="content">Trang Web CV cá nhân bao gồm các thông tin cá nhân và kỹ năng nghề nghiệp.</div>
+            </div>
+            <div class="job">
+              <div class="category">Nhiệm vụ</div>
+              <div class="content">
+                <ul>
+                  <li>Phát triển code</li>
+                  <li>Review code</li>
+                  <li>Tối ưu code</li>
+                  <li>Xử lý code</li>
+                </ul>
+              </div>
+            </div>
+            <div class="technology">
+              <div class="category">Công nghệ</div>
+              <div class="content">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="experience">
+          <img src="images/project_2.png" alt="Project 2" class="img-fluid w-100 d-none d-sm-block">
+          <div class="project-info">
+            <div class="title"><span class="title">Trang web quản lý thú cưng</span></div>
+            <div class="subtitle">
+              <span class="year">2024</span>
+              <span class="company"><i class="icon-user-1"></i>Funix</span>
+              <span class="position"><i class="icon-lamp"></i>Developer</span>
+            </div>
+            <div class="description">
+              <div class="category">Mô tả</div>
+              <div class="content">Trang Web giúp quản lý thông tin thú cưng như cân nặng, giống, tiêm chủng,..</div>
+            </div>
+            <div class="job">
+              <div class="category">Nhiệm vụ</div>
+              <div class="content">
+                <ul>
+                  <li>Phát triển code</li>
+                  <li>Review code</li>
+                  <li>Tối ưu code</li>
+                  <li>Xử lý code</li>
+                </ul>
+              </div>
+            </div>
+            <div class="technology">
+              <div class="category">Công nghệ</div>
+              <div class="content">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="experience">
+          <img src="images/project_3.png" alt="Project 3" class="img-fluid w-100 d-none d-sm-block">
+          <div class="project-info">
+            <div class="title"><span class="title">Trang web xem tin tức</span></div>
+            <div class="subtitle">
+              <span class="year">2024</span>
+              <span class="company"><i class="icon-user-1"></i>Funix</span>
+              <span class="position"><i class="icon-lamp"></i>Developer</span>
+            </div>
+            <div class="description">
+              <div class="category">Mô tả</div>
+              <div class="content">Trang Web xem tin tức từ nhiều nguồn khác nhau, người dùng có thể tìm kiếm các tin tức.</div>
+            </div>
+            <div class="job">
+              <div class="category">Nhiệm vụ</div>
+              <div class="content">
+                <ul>
+                  <li>Phát triển code</li>
+                  <li>Review code</li>
+                  <li>Tối ưu code</li>
+                  <li>Xử lý code</li>
+                </ul>
+              </div>
+            </div>
+            <div class="technology">
+              <div class="category">Công nghệ</div>
+              <div class="content">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contacts -->
+      <div class="contacts">
+        <div class="site" id="facebook">
+          <a href="https://www.facebook.com/ffhyme/" target="_blank">
+            <i class="icon-facebook-circled"></i>
+            <p>Facebook</p>
+          </a>
+        </div>
+        <div class="site" id="linkedin">
+          <a href="https://vn.linkedin.com/" target="_blank">
+            <i class="icon-linkedin-circled"></i>
+            <p>LinkedIn</p>
+          </a>
+        </div>
+        <div class="site" id="github">
+          <a href="https://github.com/" target="_blank">
+            <i class="icon-github-circled"></i>
+            <p>Github</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
