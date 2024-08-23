@@ -5,7 +5,12 @@ function verifyEmail() {
     console.log(`Inputted email: ${email.value}.`);
 
     const emailValid = emailRegex.test(email.value);
-    if (!emailValid) console.log('Email invalid!');
+    if (!emailValid) {
+        console.log('Email invalid!')
+
+        const invalidText = document.getElementById('invalidEmail');
+        invalidText.style.display = 'block';
+    }
     else {
         console.log('Email valid!');
 
