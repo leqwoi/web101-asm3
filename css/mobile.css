@@ -67,7 +67,10 @@
     
             a:link, a:visited, a:active {
                 i {
-                    font-size: 15px;
+                    font-size: 30px;
+                }
+                p {
+                    display: none;
                 }
             }
         }
